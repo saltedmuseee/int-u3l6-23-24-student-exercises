@@ -5,22 +5,22 @@ let hoverCard = document.querySelector('[data-secret="hover"]');
 // 1. Add an event listener to reveal the image on hover.
 //  - The selector is hoverCard
 //  - The event type is mouseover
-{
+hoverCard.addEventListener("mouseover", function () {
     let image = document.querySelector('.hidden-image');
     image.style.width = '100%';
     image.style.height = '100%';
     image.style.opacity = '1';
-}
+})
 
 // 2. Add an event listener to make the image hidden again.
 //  - The selector is hoverCard
 //  - The event type is mouseout
-{
+hoverCard.addEventListener("mouseout", function () {
     let image = document.querySelector('.hidden-image');
     image.style.width = '0';
     image.style.height = '0';
     image.style.opacity = '0';
-}
+})
 
 
 
@@ -28,9 +28,9 @@ const clickCard = document.querySelector('[data-secret="click"]');
 // 3. Add an event listener to reveal and animate the shape on click.
 //  - The selector is clickCard
 //  - The event type is click
-{
+clickCard.addEventListener("click", function () {
     clickCard.classList.toggle('revealed');
-}
+})
 
 
 const doubleClickCard = document.querySelector('[data-secret="double-click"]');
